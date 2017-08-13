@@ -10,8 +10,28 @@
 <body>
   <!-- Render navigation bar -->
   <%= render "layouts/navigation" %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <% if notice %>
+    <div class="container">
+      <div class="ccol-sm-10 col-sm-offset-1 col-xs-12">
+        <div class="box">
+          <div class="text-center">
+            <p class="notice"><%= notice %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <% if alert %>
+    <div class="container">
+      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+        <div class="box">
+          <div class="text-center">
+            <p class="alert"><%= alert %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
   <div class="container-fluid">
     <%= yield %>
   </div>
