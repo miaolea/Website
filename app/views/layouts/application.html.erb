@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= favicon_link_tag 'icon_mv.png' %>
+  <title>vettestad.no</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- Render navigation bar -->
+  <%= render "layouts/navigation" %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
+
+
+
+  <footer>
+    <div class="container">
+        <div class="footer">
+              <div class="text-center">
+                <p>Developet by Mia Olea Vettestad </p>
+                  <hr/>
+                <p><%= mail_to "mia.vettestad.95@gmail.com", "Email me" %>
+                </p>
+              </div>
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="https://www.linkedin.com/in/mia-olea-vettestad/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/miaolea.vettestad">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/miaolea">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+    </div>
+    </div>
+</footer>
+
+      <!-- jQuery
+      <script src="js/jquery.js"></script>
+       -->
+      <!-- Bootstrap Core JavaScript
+      <script src="js/bootstrap.min.js"></script>
+      -->
+
+</body>
+</html>
